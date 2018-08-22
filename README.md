@@ -11,3 +11,8 @@ Saves all commits to non-owned repositories to your own repository as dummy comm
 3. Download [post-commit](post-commit) and set `GITHUB_ACCOUNT_URL` and `DUMMY_COMMIT_REPOSITORY`
 4. Make `post-commit` executable by running `chmod +x post-commit`
 5. Copy `post-commit` to a project's `.git/hooks` directory to have it save dummy commits
+
+## Check that it works
+
+1. Create a local commit for a project with `post-commit` installed
+2. Check that your dummy commit repository (e.g. `git-history`) on GitHub received the dummy commit
