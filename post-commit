@@ -1,0 +1,22 @@
+#!/bin/bash
+GITHUB_ACCOUNT_URL="https://github.com/your-username/"
+DUMMY_COMMIT_REPOSITORY="$HOME/path-to-local/dummy-commit-repository"
+
+# Exit immediately if a command exits with a non-zero status
+set -e
+
+# Abort if last commit is to owned repository
+remoteUrl="$(git config --get remote.origin.url)"
+
+if [[ $remoteUrl =~ ^$GITHUB_ACCOUNT_URL ]]; then
+	echo "git-post-commit-dummy: Commit to owned repository."
+	exit 1
+fi
+
+# Push empty commit (message only) to dummy commit repository
+message="$(git log -1 --pretty=%s)"
+
+cd $DUMMY_COMMIT_REPOSITORY
+git pull
+git commit --allow-empty -m "$message"
+git push
