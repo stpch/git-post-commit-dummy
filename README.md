@@ -23,4 +23,4 @@ https://url-to-non-owned-repository
 ## Check that it works
 
 1. Create a local commit for a project with `post-commit` installed
-2. Check that your dummy commit repository (e.g. `git-history`) on GitHub received the dummy commit
+2. Check that your dummy commit repository (e.g. `git-history`) received the dummy commit
