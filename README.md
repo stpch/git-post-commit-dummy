@@ -14,7 +14,7 @@ https://url-to-non-owned-repository
 
 ## Installation
 
-1. Create a new repository (e.g. `git-history`) in your GitHub account that will be used as dummy commit target
+1. Create a new repository (e.g. `git-history`) that will be used as dummy commit target
 2. Clone the repository to your local machine and note its path
 3. Download [post-commit](post-commit) and set `GITHUB_ACCOUNT_URL` and `DUMMY_COMMIT_REPOSITORY`
 4. Make `post-commit` executable by running `chmod +x post-commit`
