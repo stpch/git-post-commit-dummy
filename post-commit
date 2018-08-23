@@ -17,6 +17,7 @@ fi
 message="$(git log -1 --pretty=%s)"
 
 cd $DUMMY_COMMIT_REPOSITORY
+
 git pull
-git commit --allow-empty -m "$message"
+git commit --allow-empty -m "$message" -m "$remoteUrl"
 git push
